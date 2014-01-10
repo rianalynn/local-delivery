@@ -1,4 +1,3 @@
-
   
   This code will serve as the snippet for WeDeliver merchant companies using Shopify
   
@@ -8,28 +7,24 @@
 
 
 
-  <div id="order-delivery">
-  <h3>Local Order WeDeliver</h3>
-      
-    <div id="order-delivery-form-wrapper" class="clearfix">
-      <p>One or more of the items in your cart are available for local delivery.<p>
-      
-      <p>{{shop.metafields.local_delivery.custom_text}}</p>
-      
-      <p>When would you like your order delivered?</p>
-      
-      <p>Date: <input type="text" id="datepicker" readonly="readonly" /> <p>
 
-      <div id="loading">Finding available delivery times...</div>
-      
-      <div style="DISPLAY: none" id="timeDiv">
-        <p>Time:<select name="attributes[local_delivery_request]" id="local_delivery" style="width: 150px"></select></p> 
-      </div>
-        
-    </div>
-  
-    <div id="wrapper-response"></div>
-  </div>
-  
-  <br />
-{% endif %}
+  <h3>Local Order WeDeliver</h3>
+{{ 'http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
+{{ '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js' | script_tag }}
+ 
+<div style="width:300px; clear:both;">
+  <p>
+    <label for="date">Pick a delivery date:</label>
+    <input id="date" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" />
+    <span style="display:block" class="instructions"> We do not deliver during the week-end.</span>
+  </p>
+</div>
+ 
+<script>
+jQuery(function() {
+  jQuery("#date").datepicker( { 
+    minDate: +1, 
+    maxDate: "+2M"
+  } );
+});
+</script>
