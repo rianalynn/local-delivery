@@ -1,12 +1,4 @@
-  
-  This code will serve as the snippet for WeDeliver merchant companies using Shopify
-  
-   local-delivery
-==============
-
-
-
-
+This code will serve as the snippet for WeDeliver merchant companies using Shopify
 
   <h3>Local Order WeDeliver</h3>
 {{ 'http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
