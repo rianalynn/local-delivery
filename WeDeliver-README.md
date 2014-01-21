@@ -8,7 +8,7 @@ This code will serve as the snippet for WeDeliver merchant companies using Shopi
   <p>
     <label for="date">Pick a delivery date:</label>
     <input id="date" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" />
-    <span style="display:block" class="instructions"> We do not deliver during the week-end.</span>
+    <span style="display:block" class="instructions"> You will receive a delivery time-frame upon review. Local Chicago Delivery powered by WeDeliver.</span>
   </p>
 </div>
  
